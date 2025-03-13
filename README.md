@@ -1,4 +1,4 @@
-# CL9 - Python : 'Ahorcado' : 1er progrma complejo - Listas y módulos - PyR 2024_25 CMM BML
+# CL9 - Python : 'Ahorcado' : 1er programa complejo - Listas y módulos - PyR 2024_25 CMM BML
 
 Forma parte de la serie '**Workshop about Python and micropython with Pico W in CMM Benito**' Martin Madrid
 
@@ -74,7 +74,7 @@ Los 2 programas con mejoras de Ahorcado_simple, también requerirán importar el
 
 ## Diseño del ‘Ahorcado’: bloques en seudocódigo
 
-![](C:\Users\josec\OneDrive\Documentos\GitHub\2425CL9_Ahorcado\ahorcadoseudocogigo.png)
+![](./ahorcadoseudocogigo.png)
 
 ## Estudiar y probar:   “AhorcadoSimple” + mejoras 1 y 2
 
@@ -94,7 +94,7 @@ Aqui vamos a incluir :
 
 Veamos un diagrama de seudocódigo con más detalle
 
-![](C:\Users\josec\OneDrive\Documentos\GitHub\2425CL9_Ahorcado\seudocodigoDet.png)
+![](./seudocodigoDet.png)
 
 El programa en Python incluye comentarios que siguen los bloques de seudocódigo, por ejemplo
 
@@ -128,7 +128,7 @@ ver del libro de Python [Funciones](https://ellibrodepython.com/funciones-en-pyt
 
 ### Punto de situación en el Mapa de conceptos de Programación
 
- ![](C:\Users\josec\OneDrive\Documentos\GitHub\2425CL9_Ahorcado\mapaConceptos_prog.png)
+ ![](./mapaConceptos_prog.png)
 
 Hemos visto :
 
