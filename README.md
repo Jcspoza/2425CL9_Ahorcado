@@ -74,11 +74,53 @@ Los 2 programas con mejoras de Ahorcado_simple, también requerirán importar el
 
 ## Diseño del ‘Ahorcado’: bloques en seudocódigo
 
-
-
-![](C:\Users\josec\AppData\Roaming\marktext\images\2025-03-13-20-16-57-image.png)
+![](C:\Users\josec\OneDrive\Documentos\GitHub\2425CL9_Ahorcado\ahorcadoseudocogigo.png)
 
 ## Estudiar y probar:   “AhorcadoSimple” + mejoras 1 y 2
+
+### Modulo : P_ahorcadoListas.py
+
+Aqui vamos a incluir :
+
+* Dibujos del ahorcado como lista
+
+* Lista de palabras secretas -> ver uso de [split](https://ellibrodepython.com/cadenas-python#splitsepnone-maxsplit-1)
+
+* Alfabeto : letras que se consideran validas. En una primera versión no se utilizaran acentos
+
+* Mensaje de presentación
+
+### Programa Principal : P_ahorcado_simple.py
+
+Veamos un diagrama de seudocódigo con más detalle
+
+![](C:\Users\josec\OneDrive\Documentos\GitHub\2425CL9_Ahorcado\seudocodigoDet.png)
+
+El programa en Python incluye comentarios que siguen los bloques de seudocódigo, por ejemplo
+
+```
+# BLOQUE de juego 1 - INICIALIZACION
+# 1.1 presentacion de Juego
+print(f'Programa del ahorcado Clase 9 - Version {VERSION}')
+print(MENS_PRESENTA)
+
+# 1.2 Inicializacion de variables de juego
+letrasFalladas = ''
+letrasCorrectas = ''
+JuegoAcabado = False
+
+# 1.3 Eleccion de la palabra a adivinar
+IndiceAleatorio = randint(0, len(PALABRAS) - 1)
+palabraSecreta = PALABRAS[IndiceAleatorio] # eleccion de la palabra a adivinar
+```
+
+Se corresponden con los 2 últimos bloques de 1-INICIO
+
+Se explicará en la clase cada bloque, pero antes conviene estudiar el concepto de programación funcional
+
+### Programación Funcional
+
+ver del libro de Python [Funciones](https://ellibrodepython.com/funciones-en-python)
 
 
 
@@ -86,17 +128,15 @@ Los 2 programas con mejoras de Ahorcado_simple, también requerirán importar el
 
 ### Punto de situación en el Mapa de conceptos de Programación
 
-![](C:\Users\josec\OneDrive\Documentos\03_MAKER\MK_PROJECTS\CMM_MK_2410O_J25\2425CL4_AdiNum\mapaConceptos_prog.png) 
+ ![](C:\Users\josec\OneDrive\Documentos\GitHub\2425CL9_Ahorcado\mapaConceptos_prog.png)
 
-Abordaremos la zona azul clara de Flujo de operaciones: for y la zona naranja de tipos de datos 
+Hemos visto :
 
-## Cadenas - ver pdf cadenas
+* Módulos : (azul oscuro)
 
-### For y Tuplas - ver pdf for y tuplas
+* Programación funcional
 
-### Listas - ver pdf Listas
-
-## Preguntas sobre la Clase 8 - 10 minutos
+## Preguntas sobre la Clase 9 - 10 minutos
 
 Sección para que los alumnos pregunten sus dudas durante la clase
 
