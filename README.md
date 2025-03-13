@@ -122,8 +122,6 @@ Se explicará en la clase cada bloque, pero antes conviene estudiar el concepto 
 
 ver del libro de Python [Funciones](https://ellibrodepython.com/funciones-en-python)
 
-
-
 ---
 
 ### Punto de situación en el Mapa de conceptos de Programación
