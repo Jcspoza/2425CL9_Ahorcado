@@ -17,7 +17,7 @@ VERSION = 'Mejoras 1 y 2'
 
 # 0.3 Definiciones de Funciones
 def expandeStr(cadena):
-    """Expande una cadena de caracteres con 1 caracter + por cada letra"""
+    """Expande una cadena de caracteres con 1 caracter + por cada letra."""
     
     cadenaExpan =""
     for l in cadena:
@@ -27,9 +27,11 @@ def expandeStr(cadena):
 
 
 def muestraPanel(letrasFall, letrasCorr, palabraSec):
-    """Muestra el panel del juego en texto: dibujo ahoracado e info de letras falladas y acertadas
+    """Muestra el panel del juego en texto: dibujo ahoracado e info de letras falladas y acertadas.
+    
     Version 1.2 Mej1  reemplaza rayas con las letras correctas en su posicion 
                 Mej2 Expande letras falladas y correctas con 1 caracter + por cada letra"""
+    
     # primero el dibujo del ahoracado
     print(AHORCADO_PICS[len(letrasFall)]) # con mas letras falladas mas partes del ahorcado
     print()
@@ -45,7 +47,8 @@ def muestraPanel(letrasFall, letrasCorr, palabraSec):
     print(f'{huecosPsec} huecos en la palabra: {huecosXrayas} #Letras adivinadas: {expandeStr(letrasCorr)}')  
 
 def adivinaLetra(yaPropuestas):
-    """Devuelve la letra propuesta por el jugador y chequea que sea una letra nueva"""
+    """Devuelve la letra propuesta por el jugador y chequea que sea una letra nueva."""
+    
     letraPropuesta = ""
     while (letraPropuesta not in ALFABETO) or letraPropuesta in yaPropuestas: 
         letraPropuesta = input('Di 1 letra nueva:').lower()[0]
@@ -53,7 +56,8 @@ def adivinaLetra(yaPropuestas):
     return letraPropuesta
         
 def CheckGano(palabraSec, letrasAdiv):
-    """Chequea si el jugador ha adivinado todas las letras de palabraSec """
+    """Chequea si el jugador ha adivinado todas las letras de palabraSec. """
+    
     for letra in palabraSec:
         if letra not in letrasAdiv:
             return False
@@ -61,7 +65,7 @@ def CheckGano(palabraSec, letrasAdiv):
     return True
 
 def CheckPerdio(letFall, maxFall):
-    """Chequea que no hemos sobrepasado el maximo de fallos"""
+    """Chequea que no hemos sobrepasado el maximo de fallos."""
     
     return len(letFall) >= maxFall
 
