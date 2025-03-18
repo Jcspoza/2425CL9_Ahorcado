@@ -262,6 +262,18 @@ def expandeStr(cadena):
     return cadenaExpan
 ```
 
+### Documentar Funciones - AVANZADO
+
+La manera de documentar funciones es usando triples comillas o dobles comillas. Por convencion mejor usa dobles comillas. 
+
+A estas cadenas de documentación se las denomina docstrings y no son meros comentarios. Se puede leer un tutorial sencillo en 
+
+
+
+[Cómo documentar tu código Python](https://pywombat.com/articles/docstring-python)
+
+
+
 ---
 
 ### Punto de situación en el Mapa de conceptos de Programación
