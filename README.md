@@ -39,7 +39,7 @@ Leer Libro de python:
 
 [Modulos](https://ellibrodepython.com/modulos-python#m%C3%B3dulos-en-python)
 
-Nota : **explicar `__main__`**
+Nota : [explicar   ` __main__ ` ](https://ellibrodepython.com/modulos-python#m%C3%B3dulos-y-funci%C3%B3n-main)
 
 ## Módulos: ¿Por qué? Ventajas
 
@@ -99,6 +99,31 @@ Veamos un diagrama de seudocódigo con más detalle
 El programa en Python incluye comentarios que siguen los bloques de seudocódigo, por ejemplo
 
 ```
+# 1.2 Inicializacion de variables de juego
+letrasFalladas = ''
+letrasCorrectas = ''
+JuegoAcabado = False
+
+
+```
+
+Se corresponden con un bloques de 1-INICIO
+
+Se explicará en la clase cada bloque, pero antes conviene estudiar el concepto de programación funcional
+
+### Programación Funcional
+
+ver del libro de Python [Funciones](https://ellibrodepython.com/funciones-en-python)
+
+
+
+### Partes de Principal : P_ahorcado_simple.py
+
+
+
+#### Inicio
+
+```
 # BLOQUE de juego 1 - INICIALIZACION
 # 1.1 presentacion de Juego
 print(f'Programa del ahorcado Clase 9 - Version {VERSION}')
@@ -114,13 +139,61 @@ IndiceAleatorio = randint(0, len(PALABRAS) - 1)
 palabraSecreta = PALABRAS[IndiceAleatorio] # eleccion de la palabra a adivinar
 ```
 
-Se corresponden con los 2 últimos bloques de 1-INICIO
+Explicar 1.3
 
-Se explicará en la clase cada bloque, pero antes conviene estudiar el concepto de programación funcional
 
-### Programación Funcional
 
-ver del libro de Python [Funciones](https://ellibrodepython.com/funciones-en-python)
+#### 2- Bucle de Juego
+
+```
+# 2- BUCLE PRINCIPAL DE JUEGO
+while not JuegoAcabado:
+    # Paso 2.1 - Muestra panel de situacion: dibujo del ahorcado, y aciertos
+    print('----------------------- Nuevo Intento -----------------------')
+    muestraPanel(letrasFalladas, letrasCorrectas, palabraSecreta)
+
+    # Paso 2.2 - El jugador debe proponer una letra distinta a las ya dichas
+    propuesta = adivinaLetra(letrasFalladas + letrasCorrectas)
+
+    # Paso 2.3 - Dinamica de juego -> Comprueba si letra propuesta esta en palabra a adivinar
+    if propuesta in palabraSecreta:
+        # Paso 2.3.A si letra propuesta esta en palabra secreta
+        letrasCorrectas = letrasCorrectas + propuesta
+
+        # Chequea si el jugador ha ganado       
+        todasLetrasEncontradas = CheckGano(palabraSecreta, letrasCorrectas)
+            
+        JuegoAcabado = todasLetrasEncontradas               
+            
+    else: # Paso 2.3.B NO esta
+        letrasFalladas = letrasFalladas + propuesta
+        # Paso 2.3.B.2 Chequea si el jugador ha pasado su numero de fallos
+        JuegoAcabado = CheckPerdio(letrasFalladas, MAXFALLOS)
+
+```
+
+Se ha hecho una abstracción con las funciones y asi el bucle de juego se ve como simple
+
+#### 3-FIN
+
+```
+ Bloque 3 FIN DEL JUEGO
+#3.1 Muestara ultimo panel
+print('===================== FIN DE JUEGO =====================')
+muestraPanel(letrasFalladas, letrasCorrectas, palabraSecreta)
+# 3.2 Mensajes de Ganar o Perder
+if todasLetrasEncontradas:
+    print('¡Si! La palabra secreta es "' + palabraSecreta + '"¡Has ganado!')
+else:
+    print('¡Has agotado todos los intentos!')
+    print('Despues de fallar ' + str(len(letrasFalladas)) + ' veces y acertar ' + str(len(letrasCorrectas)) + ' veces. La palabra era "' + palabraSecreta + '"')
+# FIN DE PROGRAMA
+
+```
+
+Muestra una ultima vez el panel de juego. Selección de si ganó o perdió y mostrar los mensaje correspondientes 
+
+
 
 ---
 
