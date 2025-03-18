@@ -62,11 +62,13 @@ print(MENS_PRESENTA)
 letrasFalladas = ''
 letrasCorrectas = ''
 JuegoAcabado = False
+todasLetrasEncontradas = False
 
 # 1.3 Eleccion de la palabra a adivinar
 IndiceAleatorio = randint(0, len(PALABRAS) - 1)
 palabraSecreta = PALABRAS[IndiceAleatorio] # eleccion de la palabra a adivinar
-
+# Debug, quitar comentario
+print(palabraSecreta)
 
 # 2- BUCLE PRINCIPAL DE JUEGO
 while not JuegoAcabado:

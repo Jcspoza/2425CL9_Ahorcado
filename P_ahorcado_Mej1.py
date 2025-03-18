@@ -25,10 +25,11 @@ def muestraPanel(letrasFall, letrasCorr, palabraSec):
     print()
     # Info de letras falladas
     print(f'Letras Falladas {len(letrasFall)} de {MAXFALLOS} fallos: {letrasFall}')
+    
     # info de letras acertadas
     huecosPsec = len(palabraSec)
     huecosXrayas = '-' * huecosPsec
-    for i in range(len(palabraSec)): # reemplaza rayas con las letras correctas en su posicion
+    for i in range(len(palabraSec)): # Mej 1: reemplaza rayas con las letras correctas en su posicion
         if palabraSec[i] in letrasCorr:
             huecosXrayas = huecosXrayas[:i] + palabraSecreta[i] + huecosXrayas[i+1:]
     
@@ -70,7 +71,6 @@ JuegoAcabado = False
 # 1.3 Eleccion de la palabra a adivinar
 IndiceAleatorio = randint(0, len(PALABRAS) - 1)
 palabraSecreta = PALABRAS[IndiceAleatorio] # eleccion de la palabra a adivinar
-
 
 # 2- BUCLE PRINCIPAL DE JUEGO
 while not JuegoAcabado:
