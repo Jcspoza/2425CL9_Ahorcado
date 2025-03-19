@@ -2,8 +2,6 @@
 
 Forma parte de la serie '**Workshop about Python and micropython with Pico W in CMM Benito**' Martin Madrid
 
-Sigue la clase en los pfd CL9 y CL10
-
 ## Clase 9 - Indice - 90 minutos
 
 - Módulos: ¿Por qué? Ventajas
@@ -41,6 +39,8 @@ Leer Libro de python:
 
 Nota : [explicar   ` __main__ ` ](https://ellibrodepython.com/modulos-python#m%C3%B3dulos-y-funci%C3%B3n-main)
 
+En los pdfs CL9 y especialmente en el de **CL10** hay información complementaria sobre cadenas , f-strings y listas, que servirá para entender partes de los programas
+
 ## Módulos: ¿Por qué? Ventajas
 
 Los módulos en Python son una de sus características más poderosas
@@ -70,7 +70,13 @@ en un modulo aparte :
 
 para entender como funcionan los módulos y sus ventajas. 
 
-Los 2 programas con mejoras de Ahorcado_simple, también requerirán importar el modulo
+Los 2 programas con mejoras de Ahorcado_simple, 
+
+[P_ahorcado_Mej1.py](P_ahorcado_Mej1.py)
+
+[P_ahorcado_Mej1y2.py](P_ahorcado_Mej1y2.py)
+
+también requerirán importar el modulo
 
 ## Diseño del ‘Ahorcado’: bloques en seudocódigo
 
@@ -264,15 +270,11 @@ def expandeStr(cadena):
 
 ### Documentar Funciones - AVANZADO
 
-La manera de documentar funciones es usando triples comillas o dobles comillas. Por convencion mejor usa dobles comillas. 
+La manera de documentar funciones es usando triples comillas o dobles comillas. Por convención mejor usa dobles comillas. 
 
 A estas cadenas de documentación se las denomina docstrings y no son meros comentarios. Se puede leer un tutorial sencillo en 
 
-
-
 [Cómo documentar tu código Python](https://pywombat.com/articles/docstring-python)
-
-
 
 ---
 
@@ -284,7 +286,7 @@ Hemos visto :
 
 * Módulos : (azul oscuro)
 
-* Programación funcional
+* Programación funcional ( verde) una introducción
 
 ## Preguntas sobre la Clase 9 - 10 minutos
 
